@@ -10,5 +10,18 @@
   <%= @recipe.description %>
 </p>
 
+<% @recipe.ingredients.each do |ingredient| %>
+  <p>
+  <strong>Name:</strong>
+  <%= ingredient.name %>
+
+  <strong>Amount:</strong>
+  <%= ingredient.amount %>
+
+  <strong>Unit:</strong>
+  <%= ingredient.unit %>
+</p>
+<% end %>
+
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
