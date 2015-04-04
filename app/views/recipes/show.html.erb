@@ -2,32 +2,35 @@
 
 <div class="row">
   <div class="columns">
-
-    <h3>Name:</h3>
-    <p>
+    <h4>
+      <strong>Name:</strong>
       <%= @recipe.name %>
-    </p>
+    </h4>
 
-    <p>
+    <h4>
       <strong>Description:</strong>
       <%= @recipe.description %>
-    </p>
+    </h4>
   </div>
 </div>
 
 <div class="row">
   <div class="columns">
+  <br>
+    <h4>Ingredients</h4>
     <% @recipe.ingredients.each do |ingredient| %>
-      <p>
-      <strong>Name:</strong>
-      <%= ingredient.name %>
+      <div class="panel">
+        <h6>
+        <strong>Name:</strong>
+        <%= ingredient.name %> |
 
-      <strong>Amount:</strong>
-      <%= ingredient.amount %>
+        <strong>Amount:</strong>
+        <%= ingredient.amount %> |
 
-      <strong>Unit:</strong>
-      <%= ingredient.unit %>
-    </p>
+        <strong>Unit:</strong>
+        <%= ingredient.unit %> |
+      </h6>
+     </div>
     <% end %>
   </div>
 </div>

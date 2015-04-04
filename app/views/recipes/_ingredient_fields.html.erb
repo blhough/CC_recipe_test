@@ -1,0 +1,17 @@
+<div class="ingredient panel">
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br>
+    <%= f.text_field :unit %>
+  </div>
+      <%= f.hidden_field :_destroy %>
+     <%= link_to "remove", '#', class: "remove_fields" %>
+
+</div>
