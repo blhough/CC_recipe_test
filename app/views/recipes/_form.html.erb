@@ -19,6 +19,22 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+  <% f.fields_for :ingredients do |builder| %>
+    <p>
+      <div class="field">
+        <%= builder.label :name %><br>
+        <%= builder.text_field :name %>
+      </div>
+      <div class="field">
+        <%= builder.label :amount %><br>
+        <%= builder.text_field :amount %>
+      </div>
+      <div class="field">
+        <%= builder.label :unit %><br>
+        <%= builder.text_field :unit %>
+      </div>
+    </p>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
