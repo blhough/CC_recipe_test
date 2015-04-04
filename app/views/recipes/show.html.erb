@@ -1,4 +1,19 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+<div class="row">
+  <div class="columns">
+    <div data-alert class="alert-box success radius">
+      <%= notice %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="columns">
+    <h1>Recipe</h1>
+  </div>
+</div>
 
 <div class="row">
   <div class="columns">

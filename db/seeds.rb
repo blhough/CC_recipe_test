@@ -10,3 +10,6 @@ recipes = Recipe.create([{name: 'pbj', description: 'test'},{name: 'mac and chee
 Ingredient.create(name: 'cheese', amount: 'lots', unit: 'lbs', recipe: recipes.first)
 Ingredient.create(name: 'mac', amount: 'lots', unit: 'lbs', recipe: recipes.first)
 Ingredient.create(name: 'milk', amount: '2', unit: 'gallons', recipe: recipes.first)
+
+
+

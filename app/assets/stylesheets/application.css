@@ -21,12 +21,4 @@ body{
   background-color: $body-bg;
 }
 
-.ingredient{
-  border: 1px solid black;
-  border-radius: 3px;
-  display: block;
-}
 
-.field{
-
-}
