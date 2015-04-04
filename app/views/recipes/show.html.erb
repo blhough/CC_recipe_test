@@ -33,20 +33,13 @@
   <div class="columns">
   <br>
     <h4>Ingredients</h4>
-    <% @recipe.ingredients.each do |ingredient| %>
-      <div class="panel">
-        <h6>
-        <strong>Name:</strong>
-        <%= ingredient.name %> |
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
 
-        <strong>Amount:</strong>
-        <%= ingredient.amount %> |
+        <li><%= ingredient.amount %> <%= ingredient.unit.pluralize(ingredient.amount.to_f) %> <%= ingredient.name %></li>
 
-        <strong>Unit:</strong>
-        <%= ingredient.unit %> |
-      </h6>
-     </div>
-    <% end %>
+      <% end %>
+    </ul>
   </div>
 </div>
 
