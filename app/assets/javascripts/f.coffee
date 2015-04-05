@@ -1,4 +1,4 @@
-# $ ->
-#   $(document).on("page:change", ->
-#     $(document).foundation()
-#   )
+$ ->
+  $(document).on("page:change", ->
+    $(document).foundation()
+  )
