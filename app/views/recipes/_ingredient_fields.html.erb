@@ -3,11 +3,6 @@
 <div class="ingredient panel">
 <div class="row">
   <div class="medium-4 columns">
-    <label><%= f.label :name %>
-      <%= f.text_field :name, class: "ingredient-component" %>
-    </label>
-  </div>
-  <div class="medium-4 columns">
     <label><%= f.label :amount %>
       <%= f.text_field :amount , class: "ingredient-component" %>
     </label>
@@ -17,9 +12,14 @@
       <%= f.text_field :unit, class: "ingredient-component" %>
     </label>
   </div>
+  <div class="medium-4 columns">
+    <label><%= f.label :name %>
+      <%= f.text_field :name, class: "ingredient-component" %>
+    </label>
+  </div>
 </div>
 
 
      <%= f.hidden_field :_destroy %>
-     <%= link_to "remove", 'javascript:void(0)', class: "remove_fields small radius button" %>
+     <%= link_to "remove", 'javascript:void(0)', class: "remove_fields tiny radius button", tabindex: -1 %>
 </div>

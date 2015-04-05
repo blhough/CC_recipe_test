@@ -9,18 +9,19 @@ $(document).on "page:change", ->
     $(this).closest('.ingredient').hide()
     event.preventDefault
 
-  $('form').on 'click', '.add_fields', (event) ->
+  $('form').on 'click', '#add_fields', (event) ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g' )
     $(this).before($(this).data('fields').replace(regexp, time ))
     event.preventDefault
-    console.log('click')
+    console.log('add ingredient')
 
   $('form').on 'input', '.ingredient-component', (event) ->
-    if $(this).closest('.ingredient').is(":last-child")
+    #console.log( $(this).closest('.ingredient').get(0) == $(".ingredient").last().get(0) )
+    if $(this).closest('.ingredient').get(0) == $(".ingredient").last().get(0)
       time = new Date().getTime()
-      regexp = new RegExp($('.add_fields').data('id'), 'g' )
-      $(this).closest('.ingredient').after($('.add_fields').data('fields').replace(regexp, time ))
+      regexp = new RegExp($('#add_fields').data('id'), 'g' )
+      $(this).closest('.ingredient').after($('#add_fields').data('fields').replace(regexp, time ))
       event.preventDefault
-      console.log('focus')
+      console.log('add ingredient')
 
