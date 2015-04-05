@@ -1,17 +1,25 @@
-<div class="ingredient panel">
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :unit %><br>
-    <%= f.text_field :unit %>
-  </div>
-      <%= f.hidden_field :_destroy %>
-     <%= link_to "remove", '#', class: "remove_fields small radius button" %>
 
+
+<div class="ingredient panel">
+<div class="row">
+  <div class="medium-4 columns">
+    <label><%= f.label :name %>
+      <%= f.text_field :name, class: "ingredient-component" %>
+    </label>
+  </div>
+  <div class="medium-4 columns">
+    <label><%= f.label :amount %>
+      <%= f.text_field :amount , class: "ingredient-component" %>
+    </label>
+  </div>
+    <div class="medium-4 columns">
+    <label><%= f.label :unit %>
+      <%= f.text_field :unit, class: "ingredient-component" %>
+    </label>
+  </div>
+</div>
+
+
+     <%= f.hidden_field :_destroy %>
+     <%= link_to "remove", 'javascript:void(0)', class: "remove_fields small radius button" %>
 </div>

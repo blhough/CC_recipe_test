@@ -1,10 +1,16 @@
 <div class="row">
-  <div class="columns large-6">
+  <div class="columns">
     <h1>Editing Recipe</h1>
-
-    <%= render 'form' , action: "Update" %>
-
-    <%= link_to 'Show', @recipe %> |
-    <%= link_to 'Back', recipes_path %>
   </div>
 </div>
+
+
+<%= render 'form',  action: "Update" %>
+
+
+<div class="row">
+  <div class="columns">
+    <%= link_to 'Back', recipes_path , class: "round button tiny" %>
+  </div>
+</div>
+
