@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412185238) do
+ActiveRecord::Schema.define(version: 20150412202821) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "recipe_id"
-    t.integer  "chapters_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "chapter_id"
   end
 
-  add_index "assignments", ["chapters_id"], name: "index_assignments_on_chapters_id"
+  add_index "assignments", ["chapter_id"], name: "index_assignments_on_chapter_id"
   add_index "assignments", ["recipe_id"], name: "index_assignments_on_recipe_id"
 
   create_table "chapters", force: :cascade do |t|

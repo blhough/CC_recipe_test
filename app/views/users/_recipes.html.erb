@@ -1,0 +1,19 @@
+<h3>Recipes</h3>
+<table class="table panel table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Chapter Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% user.recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.description %></td>
+        <td><%= recipe.ingredients.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

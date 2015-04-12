@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @chapter %> |
-<%= link_to 'Back', chapters_path %>
+<div class="row">
+  <p class="col-xs-12">
+    <%= link_to 'Back', chapters_path , class: "btn btn-default btn-sm" %>
+  </p>
+</div>
+

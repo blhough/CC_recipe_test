@@ -10,5 +10,11 @@
   <%= @cookbook.subtitle %>
 </p>
 
-<%= link_to 'Edit', edit_cookbook_path(@cookbook) %> |
-<%= link_to 'Back', cookbooks_path %>
+<%= render partial: 'chapters', locals: { cookbook: @cookbook } %>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to 'Edit', edit_cookbook_path(@cookbook) , class: "btn btn-primary" %>
+    <%= link_to 'Back', cookbooks_path , class: "btn btn-default" %>
+  </div>
+</div>

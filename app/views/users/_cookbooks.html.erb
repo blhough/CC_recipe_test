@@ -1,0 +1,20 @@
+<h3>Cookbooks</h3>
+<table class="table panel table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Subtile</th>
+      <th>Ingredient Count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% user.cookbooks.each do |cookbook| %>
+      <tr>
+        <td><%= cookbook.title %></td>
+        <td><%= cookbook.subtitle %></td>
+        <td><%= cookbook.chapters.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -15,5 +15,9 @@
   <%= @chapter.subtitle %>
 </p>
 
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to 'Edit',  edit_chapter_path(@chapter)  , class: "btn btn-primary" %>
+    <%= link_to 'Back', chapters_path , class: "btn btn-default" %>
+  </div>
+</div>
