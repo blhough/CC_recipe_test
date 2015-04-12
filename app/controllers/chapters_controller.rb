@@ -15,6 +15,7 @@ class ChaptersController < ApplicationController
   # GET /chapters/new
   def new
     @chapter = Chapter.new
+
   end
 
   # GET /chapters/1/edit
@@ -24,7 +25,15 @@ class ChaptersController < ApplicationController
   # POST /chapters
   # POST /chapters.json
   def create
+
+
     @chapter = Chapter.new(chapter_params)
+    @chapter.save
+
+    chapter_params[:recipe_list].split.each do |recipe_id|
+      assignment = Assignment.new(chapter_id: @chapter.id, recipe_id: recipe_id )
+      assignment.save
+    end
 
     respond_to do |format|
       if @chapter.save
@@ -69,6 +78,6 @@ class ChaptersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapter_params
-      params.require(:chapter).permit(:cookbook_id, :title, :subtitle)
+      params.require(:chapter).permit(:cookbook_id, :title, :subtitle, :recipe_list)
     end
 end
