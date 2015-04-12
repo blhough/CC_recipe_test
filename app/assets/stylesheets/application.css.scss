@@ -12,9 +12,25 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
 
 
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body { padding-top: 70px; }
+.panel{
+  padding: 10px;
+  &-default{
+    background:#F0F2F7;
+  }
+  .panel-heading{
+  background:transparent;
+
+}
+
+}
+p{
+  padding-top: 5px;
+}

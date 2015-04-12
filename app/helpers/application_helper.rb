@@ -5,6 +5,6 @@ module ApplicationHelper
     fields = f.fields_for(association, new_object, child_index: id ) do |builder|
       render(association.to_s.singularize + "_fields", f: builder )
     end
-    link_to(name, 'javascript:void(0)' , id: "add_fields" , class: "button radius small" , data: {id: id, fields: fields.gsub("\n", "")})
+    link_to(name, 'javascript:void(0)' , id: "add_fields" , class: "btn btn-default btn-sm" , data: {id: id, fields: fields.gsub("\n", "")})
   end
 end
