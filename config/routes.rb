@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :chapters
+
+  resources :cookbooks
+
+  resources :users
+
   resources :ingredients
   resources :recipes
 
