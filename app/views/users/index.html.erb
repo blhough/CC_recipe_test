@@ -5,6 +5,7 @@
 <table class="table panel table-striped">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Recipe Count</th>
       <th>Name</th>
       <th>Bio</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.recipes.count %></td>
         <td><%= user.name %></td>
         <td><%= user.bio %></td>

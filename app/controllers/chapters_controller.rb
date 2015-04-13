@@ -30,7 +30,7 @@ class ChaptersController < ApplicationController
     @chapter = Chapter.new(chapter_params)
     @chapter.save
 
-    chapter_params[:recipe_list].split.each do |recipe_id|
+    params[:recipe_list].split.each do |recipe_id|
       assignment = Assignment.new(chapter_id: @chapter.id, recipe_id: recipe_id )
       assignment.save
     end
@@ -49,6 +49,17 @@ class ChaptersController < ApplicationController
   # PATCH/PUT /chapters/1
   # PATCH/PUT /chapters/1.json
   def update
+    @chapter.update(chapter_params)
+
+    @chapter.assignments.each do |assignment|
+      assignment.destroy
+    end
+
+    params[:recipe_list].split.each do |recipe_id|
+      assignment = Assignment.new(chapter_id: @chapter.id, recipe_id: recipe_id )
+      assignment.save
+    end
+
     respond_to do |format|
       if @chapter.update(chapter_params)
         format.html { redirect_to @chapter, notice: 'Chapter was successfully updated.' }

@@ -1,10 +1,11 @@
-<h3>Recipes</h3>
+<h3>Chapters</h3>
 <table class="table panel table-striped">
   <thead>
     <tr>
       <th>Title</th>
       <th>Subtitle</th>
       <th>Recipe Count</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -13,6 +14,9 @@
         <td><%= chapter.title %></td>
         <td><%= chapter.subtitle %></td>
         <td><%= chapter.recipes.count %></td>
+        <td><%= link_to 'Show', chapter , class: "btn btn-default btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_chapter_path(chapter) , class: "btn btn-default btn-sm" %></td>
+        <td><%= link_to 'Destroy', chapter, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>

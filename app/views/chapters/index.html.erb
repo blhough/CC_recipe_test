@@ -5,6 +5,7 @@
 <table class="table table-striped panel">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Recipe Count</th>
       <th>Cookbook</th>
       <th>Title</th>
@@ -16,6 +17,7 @@
   <tbody class="table table-striped panel">
     <% @chapters.each do |chapter| %>
       <tr>
+        <td><%= chapter.id %></td>
         <td><%= chapter.recipes.count %></td>
         <td><%= chapter.cookbook %></td>
         <td><%= chapter.title %></td>
