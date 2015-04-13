@@ -7,4 +7,8 @@ module ApplicationHelper
     end
     link_to(name, 'javascript:void(0)' , id: "add_fields" , class: "btn btn-default btn-sm" , data: {id: id, fields: fields.gsub("\n", "")})
   end
+
+  def title(page_title)
+  content_for :title, page_title.to_s
+end
 end
